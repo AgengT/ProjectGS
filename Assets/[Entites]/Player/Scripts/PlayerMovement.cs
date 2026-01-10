@@ -5,7 +5,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public PlayerInputAction inputActions {get; private set;}
     public Vector2 movementInput {get; private set;}
-    public Rigidbody2D rb;
+    public Rigidbody2D rb {get; private set;}
 
     [SerializeField] private float moveSpeed =2f;
 
