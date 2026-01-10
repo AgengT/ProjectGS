@@ -4,7 +4,6 @@ public class Level : MonoBehaviour
 {
     [SerializeField] private Transform spawnPos;
     [SerializeField] private GameObject player;
-
     private void Awake()
     {
         if (spawnPos == null)
@@ -18,7 +17,7 @@ public class Level : MonoBehaviour
     {
         if (player != null && spawnPos != null)
         {
-            Instantiate(player, spawnPos.position, Quaternion.identity);
+            player.transform.position = spawnPos.position;
         }
         else
         {

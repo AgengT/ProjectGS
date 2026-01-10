@@ -68,12 +68,14 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerDie()
     {
         isDead = true;
+        Time.timeScale = 0f;
         // Handle Level Reset
     }
 
     public void PlayerReset()
     {
         isDead = false;
+        Time.timeScale = 1f;
         movementInput = Vector2.zero;
     }
 }
