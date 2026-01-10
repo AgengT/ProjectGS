@@ -61,7 +61,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if(collision.gameObject.CompareTag("Finish"))
         {
-            // Handle Level Finish
+            LevelManager.Instance.NextLevel();
         }
     }
 

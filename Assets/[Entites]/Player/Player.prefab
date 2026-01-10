@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1495906158424227284}
   - component: {fileID: 2043503199479825491}
   - component: {fileID: 4515204349954080563}
+  - component: {fileID: 307011379437933244}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -62,7 +63,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &685788045000698838
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -97,8 +98,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Offset: {x: 0.013500586, y: -0.09394896}
+  m_Size: {x: 0.2149879, y: 0.28470665}
   m_Direction: 0
 --- !u!114 &1495906158424227284
 MonoBehaviour:
@@ -178,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 4334783836991956000, guid: 8275363250f994d59a245147ea36b185, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -190,3 +191,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &307011379437933244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974315215390644871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be6465066f80f43fda38bdf428aeddad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
