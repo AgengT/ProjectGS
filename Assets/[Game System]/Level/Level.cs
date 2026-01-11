@@ -3,22 +3,22 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     [SerializeField] private Transform spawnPos;
-    // [SerializeField] private GameObject player;
+
     private void Awake()
     {
-        if (spawnPos == null)
-        {
-            Debug.LogError("SpawnPos not found in Level object.");
-        }
+        if (spawnPos == null) Debug.LogError("SpawnPos not found in Level object.");
+        
         SpawnPlayer();
     }
 
     public void SpawnPlayer()
     {
-        var player = GameObject.FindWithTag("Player");
+        var player = GameObject.FindGameObjectWithTag("Player");
         if (player != null && spawnPos != null)
         {
             player.transform.position = spawnPos.position;
+            var playerScript = player.GetComponent<PlayerMovement>();
+            if (playerScript != null) playerScript.PlayerReset();
         }
         else
         {
@@ -29,5 +29,10 @@ public class Level : MonoBehaviour
     public void LevelFinish()
     {
         LevelManager.Instance.NextLevel();
+    }
+
+    public void OnPlayerDeath()
+    {
+        LevelManager.Instance.ResetLevel();
     }
 }

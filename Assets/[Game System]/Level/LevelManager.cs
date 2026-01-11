@@ -7,6 +7,9 @@ public class LevelManager : MonoBehaviour
     public int currentLevel {get; private set;}
 
     [SerializeField] private List<GameObject> levelPrefabs;
+    [SerializeField] private Transform levelParent;
+
+    private GameObject currentLevelObject;
 
     private void Awake()
     {
@@ -20,14 +23,26 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        LoadLevel(0);
+    }
     public void LoadLevel(int levelIndex)
     {
         currentLevel = levelIndex;
+        if(currentLevelObject != null) Destroy(currentLevelObject);
+        
+        currentLevelObject = Instantiate(levelPrefabs[currentLevel], levelParent);
     }
 
     public void NextLevel()
     {
         currentLevel ++;
+        LoadLevel(currentLevel);
+    }
+
+    public void ResetLevel()
+    {
         LoadLevel(currentLevel);
     }
 }

@@ -68,14 +68,23 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerDie()
     {
         isDead = true;
-        Time.timeScale = 0f;
-        // Handle Level Reset
+
+        rb.linearVelocity = Vector2.zero;
+
+        var level = FindFirstObjectByType<Level>();
+        if(level != null)
+        {
+            level.OnPlayerDeath();
+        }
+        else
+        {
+            Debug.LogError("Level script not found in the scene.");
+        }
     }
 
     public void PlayerReset()
     {
         isDead = false;
-        Time.timeScale = 1f;
         movementInput = Vector2.zero;
     }
 }
