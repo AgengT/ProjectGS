@@ -40,4 +40,9 @@ public class UIManager : MonoBehaviour
     {
         pauseMenu.SetActive(true);
     }
+
+    public void ShowGameFinishedUI()
+    {
+        // Implementation for showing game finished UI
+    }
 }
