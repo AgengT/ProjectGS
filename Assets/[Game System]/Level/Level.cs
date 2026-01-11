@@ -15,6 +15,7 @@ public class Level : MonoBehaviour
         var player = GameObject.FindGameObjectWithTag("Player");
         if (player != null && spawnPos != null)
         {
+            player.SetActive(true);
             player.transform.position = spawnPos.position;
             var playerScript = player.GetComponent<PlayerMovement>();
             if (playerScript != null) playerScript.PlayerReset();

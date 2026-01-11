@@ -759,6 +759,7 @@ GameObject:
   - component: {fileID: 635915130647000106}
   - component: {fileID: 6721629252702734880}
   - component: {fileID: 5656788799475213017}
+  - component: {fileID: 1007895268670890461}
   m_Layer: 0
   m_Name: Gameboy
   m_TagString: Untagged
@@ -863,6 +864,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1007895268670890461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913876945187380685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 014f5c8fbe310481f8e6c7175cc19f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8203363162536217353
 GameObject:
   m_ObjectHideFlags: 0

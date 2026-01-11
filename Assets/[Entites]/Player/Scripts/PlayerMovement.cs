@@ -62,6 +62,15 @@ public class PlayerMovement : MonoBehaviour
         else if(collision.gameObject.CompareTag("Finish"))
         {
             LevelManager.Instance.NextLevel();
+            AudioManager.PlayOneShot("FinishLevel");
+        }
+        else if(collision.gameObject.CompareTag("Final")){
+            GameManager.Instance.SetGameState(GameState.GameFinished);
+            AudioManager.PlayOneShot("FinishGame");
+        }
+        else
+        {
+            return;
         }
     }
 
@@ -69,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
     {
         isDead = true;
         rb.linearVelocity = Vector2.zero;
-
+        AudioManager.PlayOneShot("PlayerDeath");
 
         var level = FindFirstObjectByType<Level>();
         if(level != null)
