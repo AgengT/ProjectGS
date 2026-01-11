@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Start()
     {
-        inputActions.Player.Enable();
+        // inputActions.Player.Enable();
     }
 
     private void FixedUpdate()
@@ -82,6 +82,17 @@ public class PlayerMovement : MonoBehaviour
             GameManager.Instance.SetGameState(GameState.GameFinished);
             AudioManager.PlayOneShot("FinishGame");
             LevelManager.Instance.NextLevel();
+        }
+        else if (collision.gameObject.CompareTag("MainMenu"))
+        {
+            GameManager.Instance.SetGameState(GameState.MainMenu);
+            UIManager.Instance.ShowMainMenu();
+            LevelManager.Instance.ResetLevels();
+            GetComponent<SpriteRenderer>().enabled = false;
+        }
+        else if (collision.gameObject.CompareTag("Retry"))
+        {
+            GameManager.Instance.StartGame();
         }
         else
         {

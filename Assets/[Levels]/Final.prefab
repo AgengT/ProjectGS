@@ -256,7 +256,7 @@ GameObject:
   - component: {fileID: 4485134939373533676}
   m_Layer: 0
   m_Name: MainMenu
-  m_TagString: Finish
+  m_TagString: MainMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -888,6 +888,10 @@ PrefabInstance:
       propertyPath: spawnPos
       value: 
       objectReference: {fileID: 604184396526214111}
+    - target: {fileID: 5193929794596549805, guid: d472c24d085aa400cacafa94c18a405c, type: 3}
+      propertyPath: m_TagString
+      value: Retry
+      objectReference: {fileID: 0}
     - target: {fileID: 6617531298423539132, guid: d472c24d085aa400cacafa94c18a405c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5

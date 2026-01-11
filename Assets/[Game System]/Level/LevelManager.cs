@@ -26,7 +26,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        playerPrefab.SetActive(true);
+        
         LoadLevel(0);
     }
     public void LoadLevel(int levelIndex)
@@ -43,8 +43,9 @@ public class LevelManager : MonoBehaviour
         LoadLevel(currentLevel);
     }
 
-    // public void ResetLevel()
-    // {
-    //     LoadLevel(currentLevel);
-    // }
+    public void ResetLevels()
+    {
+        currentLevel = 0;
+        if(currentLevelObject != null) Destroy(currentLevelObject);
+    }
 }

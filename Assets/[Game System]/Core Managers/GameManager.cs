@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     private PlayerInputAction inputActions;
     [SerializeField] private GameObject levelManager;
+    [SerializeField] private PlayerMovement playerMovement;
 
     private void Awake()
     {
@@ -48,7 +49,6 @@ public class GameManager : MonoBehaviour
         if (CurrentGameState == GameState.Playing)
         {
             gameTimer += Time.deltaTime;
-            Debug.Log($"Game Time: {gameTimer:F2} seconds");
         }
     }
 
@@ -95,10 +95,25 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         levelManager.SetActive(true);
+        LevelManager.Instance.ResetLevels();
+
+        gameTimer = 0f;
+
         SetGameState(GameState.Playing);
         SwitchInputToPlayer();
+
         inputActions.Player.Enable();
         inputActions.UI.Disable();
+
+        LevelManager.Instance.LoadLevel(0);   
+
+        playerMovement.GetComponent<SpriteRenderer>().enabled = true;
+        playerMovement.EnableInput();
+    }
+
+    public void RetryGame()
+    {
+        StartGame();
     }
 
     public void SwitchInputToUI()
