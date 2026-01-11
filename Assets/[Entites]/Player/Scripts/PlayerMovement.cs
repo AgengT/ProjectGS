@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        inputActions.Player.Enable();
+    }
+
     private void FixedUpdate()
     {
         if(isDead){
@@ -29,7 +34,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActions.Player.Enable();
         inputActions.Player.Movement.performed += OnMovementInput;
         inputActions.Player.Movement.canceled += OnMovementCanceled;
     }
@@ -38,6 +42,16 @@ public class PlayerMovement : MonoBehaviour
     {
         inputActions.Player.Movement.performed -= OnMovementInput;
         inputActions.Player.Movement.canceled -= OnMovementCanceled;
+        DisableInput();
+    }
+
+    public void EnableInput()
+    {
+        inputActions.Player.Enable();
+    }
+
+    public void DisableInput()
+    {
         inputActions.Player.Disable();
     }
 
@@ -67,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         else if(collision.gameObject.CompareTag("Final")){
             GameManager.Instance.SetGameState(GameState.GameFinished);
             AudioManager.PlayOneShot("FinishGame");
+            LevelManager.Instance.NextLevel();
         }
         else
         {

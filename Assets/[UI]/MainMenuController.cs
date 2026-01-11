@@ -10,7 +10,6 @@ public class MainMenuController : MonoBehaviour
 
     private void OnEnable()
     {
-        inputActions.UI.Enable();
         inputActions.UI.Select.performed += OnSelectPerformed;
     }
 
@@ -18,6 +17,11 @@ public class MainMenuController : MonoBehaviour
     {
         inputActions.UI.Select.performed -= OnSelectPerformed;
         inputActions.UI.Disable();
+    }
+
+    public void EnableMenuInput()
+    {
+        inputActions.UI.Enable();
     }
 
     private void OnSelectPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)

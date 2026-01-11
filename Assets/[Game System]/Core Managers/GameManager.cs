@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameState CurrentGameState { get; private set; }
     public float gameTimer {get; private set;}
 
-    [SerializeField] private InputActionAsset playerInput;
+    private PlayerInputAction inputActions;
     [SerializeField] private GameObject levelManager;
 
     private void Awake()
@@ -19,11 +19,28 @@ public class GameManager : MonoBehaviour
         }
         Instance = this;
         DontDestroyOnLoad(this.gameObject);
+
+        inputActions = new PlayerInputAction();
     }
 
+ 
     private void Start()
     {
+        inputActions.Player.OpenPause.performed += _ => TogglePause();
+        
+        inputActions.UI.Close.performed += _ => TogglePause();
+
         SetGameState(GameState.MainMenu);
+    }
+
+    private void OnEnable()
+    {
+        inputActions?.Enable();
+    }
+
+    private void OnDisable()
+    {
+        inputActions?.Disable();
     }
 
     private void Update()
@@ -31,6 +48,24 @@ public class GameManager : MonoBehaviour
         if (CurrentGameState == GameState.Playing)
         {
             gameTimer += Time.deltaTime;
+            Debug.Log($"Game Time: {gameTimer:F2} seconds");
+        }
+    }
+
+    public void TogglePause()
+    {
+        if (CurrentGameState == GameState.MainMenu || CurrentGameState == GameState.GameFinished) return;
+
+        if (CurrentGameState == GameState.Playing)
+        {
+            SetGameState(GameState.Paused);
+            UIManager.Instance.ShowPauseMenu();
+        }
+        else if (CurrentGameState == GameState.Paused)
+        {
+            SetGameState(GameState.Playing);
+            UIManager.Instance.HidePauseMenu();
+            SwitchInputToPlayer(); 
         }
     }
 
@@ -53,7 +88,6 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.GameFinished:
                 Time.timeScale = 1f;
-                SwitchInputToUI();
                 break;
         }
     }
@@ -63,18 +97,26 @@ public class GameManager : MonoBehaviour
         levelManager.SetActive(true);
         SetGameState(GameState.Playing);
         SwitchInputToPlayer();
+        inputActions.Player.Enable();
+        inputActions.UI.Disable();
     }
 
-    private void SwitchInputToUI()
+    public void SwitchInputToUI()
     {
-        playerInput.FindActionMap("Player").Disable();
-        playerInput.FindActionMap("UI").Enable();
+        inputActions.Player.Disable();
+        inputActions.UI.Enable();
+
+        var player = FindFirstObjectByType<PlayerMovement>();
+        if (player != null) player.DisableInput();
     }
 
-    private void SwitchInputToPlayer()
+    public void SwitchInputToPlayer()
     {
-        playerInput.FindActionMap("UI").Disable();
-        playerInput.FindActionMap("Player").Enable();
+        inputActions.UI.Disable();
+        inputActions.Player.Enable();
+
+        var player = FindFirstObjectByType<PlayerMovement>();
+        if (player != null) player.EnableInput();
     }
 }
 

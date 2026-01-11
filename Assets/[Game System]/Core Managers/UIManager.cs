@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private CanvasGroup mainMenu;
     [SerializeField] private CanvasGroup pauseMenu;
 
+    [SerializeField] private MainMenuController mainMenuController;
+
     public bool isUIActive { get; private set; } = false;
 
     private float fadeDuration = 1f;
@@ -37,6 +39,9 @@ public class UIManager : MonoBehaviour
             {
                 mainMenu.interactable = true;
                 mainMenu.blocksRaycasts = true;
+
+                if(mainMenuController != null) mainMenuController.EnableMenuInput();
+                
             }
             );
     }
@@ -69,10 +74,5 @@ public class UIManager : MonoBehaviour
         pauseMenu.alpha = 0f;
         pauseMenu.interactable = false;
         pauseMenu.blocksRaycasts = false;
-    }
-
-    public void ShowGameFinishedUI()
-    {
-        // Implementation for showing game finished UI
     }
 }

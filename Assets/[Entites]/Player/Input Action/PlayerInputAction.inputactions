@@ -14,6 +14,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "OpenPause",
+                    "type": "Button",
+                    "id": "5a262d87-fc85-4fce-88d9-a5c87422a944",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -71,6 +80,17 @@
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "540563c8-b2f8-4863-942e-55ffdc73117f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenPause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -79,7 +99,7 @@
             "id": "b7667d1f-a03a-49df-bd45-cf03b8e0b8f2",
             "actions": [
                 {
-                    "name": "Open",
+                    "name": "Close",
                     "type": "Button",
                     "id": "7c256994-1cf4-47a8-a513-607f7b56b1f7",
                     "expectedControlType": "",
@@ -114,7 +134,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Open",
+                    "action": "Close",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -21,11 +21,6 @@ public class PadController : MonoBehaviour
 
     private void Update()
     {
-        // if(playerMovement.isDead == false)
-        // {
-        //     UpdateDPadVisual();
-        // }
-
         UpdateDPadVisual();
     }
 
