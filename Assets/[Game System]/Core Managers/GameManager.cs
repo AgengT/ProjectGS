@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public float gameTimer {get; private set;}
 
     [SerializeField] private InputActionAsset playerInput;
-    [SerializeField] private InputActionAsset uiInput;
+    [SerializeField] private GameObject levelManager;
 
     private void Awake()
     {
@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
                 break;
             case GameState.Playing:
                 Time.timeScale = 1f;
-                SwitchInputToPlayer();
                 break;
             case GameState.Paused:
                 Time.timeScale = 0f;
@@ -59,16 +58,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void StartGame()
+    {
+        levelManager.SetActive(true);
+        SetGameState(GameState.Playing);
+        SwitchInputToPlayer();
+    }
+
     private void SwitchInputToUI()
     {
-        playerInput.Disable();
-        uiInput.Enable();
+        playerInput.FindActionMap("Player").Disable();
+        playerInput.FindActionMap("UI").Enable();
     }
 
     private void SwitchInputToPlayer()
     {
-        uiInput.Disable();
-        playerInput.Enable();
+        playerInput.FindActionMap("UI").Disable();
+        playerInput.FindActionMap("Player").Enable();
     }
 }
 

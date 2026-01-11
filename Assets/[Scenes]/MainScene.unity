@@ -569,7 +569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4855091935323941854, guid: 40fedbb900c9447de97977f41417c116, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6721629252702734880, guid: 40fedbb900c9447de97977f41417c116, type: 3}
       propertyPath: m_SortingOrder
@@ -690,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 974315215390644871, guid: 3548283a0f8504cb39ed5fb32ffc77d6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1495906158424227284, guid: 3548283a0f8504cb39ed5fb32ffc77d6, type: 3}
       propertyPath: moveSpeed
@@ -698,7 +698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515204349954080563, guid: 3548283a0f8504cb39ed5fb32ffc77d6, type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7597437526634322810, guid: 3548283a0f8504cb39ed5fb32ffc77d6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -972,7 +972,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &739791086
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: -944628639613478452, guid: 01af514ca1ef6447a83a606efba36193, type: 3}
-  uiInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  levelManager: {fileID: 0}
 --- !u!1 &886758302
 GameObject:
   m_ObjectHideFlags: 0

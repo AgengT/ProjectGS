@@ -100,6 +100,10 @@ public class EnemyMovement : MonoBehaviour
 
             lastBounceTime = Time.time;
             SwitchTarget();
+        }else if(collision.gameObject.CompareTag("Enemy"))
+        {
+            // Ignore collision with other enemies to prevent bouncing
+            Physics2D.IgnoreCollision(collision.collider, GetComponent<Collider2D>());
         }
     }
 
