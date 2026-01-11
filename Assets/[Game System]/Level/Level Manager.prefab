@@ -45,8 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelPrefabs:
-  - {fileID: 501895111446601744, guid: 67e17f6bfdb384556bd4176b689770e0, type: 3}
-  - {fileID: 501895111446601744, guid: 3e6b41a65446145efa77c33c85600e39, type: 3}
-  - {fileID: 501895111446601744, guid: 1967defddbb344557ba13227ef80268a, type: 3}
-  - {fileID: 501895111446601744, guid: 662a8f2581668454d96c18d7d8f4e557, type: 3}
+  - {fileID: 4542695055883087026, guid: cedf1906a45de43bb9af65f10f90b0c7, type: 3}
+  - {fileID: 5099301081652887519, guid: 3f6ebe990975f410b9cbeb5cddb0d014, type: 3}
+  - {fileID: 4138275699593618601, guid: 1e4f85c88e1de4f90bb2ff5b27c739fc, type: 3}
+  - {fileID: 3417391010333604817, guid: 48d71ebf3f3d7477782400bbda458b87, type: 3}
+  - {fileID: 1383941425452899540, guid: 7accdf20b5c6a4f559dce2b4a711ccac, type: 3}
+  - {fileID: 5214540417435273723, guid: 5f5a16aab00fc46a18efa24ab1b879db, type: 3}
+  - {fileID: 8213569519393267198, guid: f41279bf5ff144dc1bfcd67090a0bdb0, type: 3}
   levelParent: {fileID: 0}

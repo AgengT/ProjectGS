@@ -841,7 +841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &739791086
 Transform:
   m_ObjectHideFlags: 0
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: -944628639613478452, guid: 01af514ca1ef6447a83a606efba36193, type: 3}
-  uiInput: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  levelManager: {fileID: 1193489255}
 --- !u!1 &886758302
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1257,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1193489255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8375750125662450671, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
+  m_PrefabInstance: {fileID: 4183610210412873620}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1197526203
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,34 +2583,34 @@ PrefabInstance:
     - target: {fileID: 5276252878491832970, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: 'levelPrefabs.Array.data[1]'
       value: 
-      objectReference: {fileID: 5099301081652887519, guid: 3f6ebe990975f410b9cbeb5cddb0d014, type: 3}
+      objectReference: {fileID: 8213569519393267198, guid: f41279bf5ff144dc1bfcd67090a0bdb0, type: 3}
     - target: {fileID: 5276252878491832970, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: 'levelPrefabs.Array.data[2]'
       value: 
-      objectReference: {fileID: 4138275699593618601, guid: 1e4f85c88e1de4f90bb2ff5b27c739fc, type: 3}
+      objectReference: {fileID: 5099301081652887519, guid: 3f6ebe990975f410b9cbeb5cddb0d014, type: 3}
     - target: {fileID: 5276252878491832970, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: 'levelPrefabs.Array.data[3]'
       value: 
-      objectReference: {fileID: 3417391010333604817, guid: 48d71ebf3f3d7477782400bbda458b87, type: 3}
+      objectReference: {fileID: 4138275699593618601, guid: 1e4f85c88e1de4f90bb2ff5b27c739fc, type: 3}
     - target: {fileID: 5276252878491832970, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: 'levelPrefabs.Array.data[4]'
       value: 
-      objectReference: {fileID: 1383941425452899540, guid: 7accdf20b5c6a4f559dce2b4a711ccac, type: 3}
+      objectReference: {fileID: 3417391010333604817, guid: 48d71ebf3f3d7477782400bbda458b87, type: 3}
     - target: {fileID: 5276252878491832970, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: 'levelPrefabs.Array.data[5]'
       value: 
-      objectReference: {fileID: 5214540417435273723, guid: 5f5a16aab00fc46a18efa24ab1b879db, type: 3}
+      objectReference: {fileID: 1383941425452899540, guid: 7accdf20b5c6a4f559dce2b4a711ccac, type: 3}
     - target: {fileID: 5276252878491832970, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: 'levelPrefabs.Array.data[6]'
       value: 
-      objectReference: {fileID: 501895111446601744, guid: 662a8f2581668454d96c18d7d8f4e557, type: 3}
+      objectReference: {fileID: 5214540417435273723, guid: 5f5a16aab00fc46a18efa24ab1b879db, type: 3}
     - target: {fileID: 8375750125662450671, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: m_Name
       value: Level Manager
       objectReference: {fileID: 0}
     - target: {fileID: 8375750125662450671, guid: 7a3c0446f856647b5abdca1bebccc0ab, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
