@@ -41,8 +41,8 @@ public class LevelManager : MonoBehaviour
         LoadLevel(currentLevel);
     }
 
-    public void ResetLevel()
-    {
-        LoadLevel(currentLevel);
-    }
+    // public void ResetLevel()
+    // {
+    //     LoadLevel(currentLevel);
+    // }
 }

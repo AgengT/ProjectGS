@@ -8,6 +8,9 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float movingSpeed = 2f;
     [SerializeField] private bool reverseDirection = false;
 
+    private float lastBounceTime;
+    private float bounceCooldown = 0.2f;
+
     private Rigidbody2D rb;
     private Vector2 currentTarget;
 
@@ -31,17 +34,33 @@ public class EnemyMovement : MonoBehaviour
     {
         if(Vector2.Distance(rb.position, currentTarget) < 0.1f)
         {
-            if(currentTarget == (Vector2)endPos.position)
-            {
-                currentTarget = startPos.position;
-            }
-            else
-            {
-                currentTarget = endPos.position;
-            }
+            SwitchTarget();
         }
 
         Vector2 newPos = Vector2.MoveTowards(rb.position, currentTarget, movingSpeed * Time.fixedDeltaTime);
         rb.MovePosition(newPos);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Bounds"))
+        {
+            if(Time.time < lastBounceTime + bounceCooldown) return;
+            
+            lastBounceTime = Time.time;
+            SwitchTarget();
+        }
+    }
+
+    private void SwitchTarget()
+    {
+        if(currentTarget == (Vector2)endPos.position)
+        {
+            currentTarget = startPos.position;
+        }
+        else
+        {
+            currentTarget = endPos.position;
+        }
     }
 }

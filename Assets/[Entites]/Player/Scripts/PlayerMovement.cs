@@ -68,8 +68,8 @@ public class PlayerMovement : MonoBehaviour
     private void PlayerDie()
     {
         isDead = true;
-
         rb.linearVelocity = Vector2.zero;
+
 
         var level = FindFirstObjectByType<Level>();
         if(level != null)

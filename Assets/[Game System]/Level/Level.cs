@@ -7,7 +7,6 @@ public class Level : MonoBehaviour
     private void Awake()
     {
         if (spawnPos == null) Debug.LogError("SpawnPos not found in Level object.");
-        
         SpawnPlayer();
     }
 
@@ -33,6 +32,6 @@ public class Level : MonoBehaviour
 
     public void OnPlayerDeath()
     {
-        LevelManager.Instance.ResetLevel();
+        SpawnPlayer();
     }
 }
