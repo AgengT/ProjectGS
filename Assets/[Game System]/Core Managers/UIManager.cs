@@ -30,6 +30,13 @@ public class UIManager : MonoBehaviour
 
     public void ShowMainMenu()
     {
+        HidePauseMenu();
+        if(GameManager.Instance.CurrentGameState == GameState.Playing)
+        {
+            LevelManager.Instance.ResetLevels();
+            GameManager.Instance.SetGameState(GameState.MainMenu);
+        }
+
         isUIActive = true;
         AudioManager.PlayLoop("BackgroundMusic");
         mainMenu.DOFade(1f, fadeDuration)
@@ -40,8 +47,7 @@ public class UIManager : MonoBehaviour
                 mainMenu.interactable = true;
                 mainMenu.blocksRaycasts = true;
 
-                if(mainMenuController != null) mainMenuController.EnableMenuInput();
-                
+                if(mainMenuController != null) mainMenuController.EnableMenuInput();     
             }
             );
     }

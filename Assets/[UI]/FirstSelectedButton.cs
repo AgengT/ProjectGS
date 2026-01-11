@@ -7,7 +7,8 @@ public class FirstSelectedButton : MonoBehaviour
     private void OnEnable()
     {
         UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
-        if(firstSelectedButton != null) 
+        if(firstSelectedButton != null) {
             UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(firstSelectedButton);
+        }
     }
 }

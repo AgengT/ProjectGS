@@ -85,9 +85,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("MainMenu"))
         {
-            GameManager.Instance.SetGameState(GameState.MainMenu);
-            UIManager.Instance.ShowMainMenu();
-            LevelManager.Instance.ResetLevels();
+            UIManager.Instance.ShowMainMenu();   
             GetComponent<SpriteRenderer>().enabled = false;
         }
         else if (collision.gameObject.CompareTag("Retry"))

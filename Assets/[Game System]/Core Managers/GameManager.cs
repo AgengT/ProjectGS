@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
         }
         else if (CurrentGameState == GameState.Paused)
         {
-            SetGameState(GameState.Playing);
+            GameManager.Instance.SetGameState(GameState.Playing);
             UIManager.Instance.HidePauseMenu();
             SwitchInputToPlayer(); 
         }
