@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> levelPrefabs;
     [SerializeField] private Transform levelParent;
+    [SerializeField] private GameObject playerPrefab;
 
     private GameObject currentLevelObject;
 
@@ -25,6 +26,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        playerPrefab.SetActive(true);
         LoadLevel(0);
     }
     public void LoadLevel(int levelIndex)

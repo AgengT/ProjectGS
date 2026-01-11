@@ -26,11 +26,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        // ShowMainMenu();
-    }
-
     public void ShowMainMenu()
     {
         isUIActive = true;
@@ -55,6 +50,7 @@ public class UIManager : MonoBehaviour
             {
                 mainMenu.interactable = false;
                 mainMenu.blocksRaycasts = false;
+                GameManager.Instance.StartGame();
             }
             );
     }

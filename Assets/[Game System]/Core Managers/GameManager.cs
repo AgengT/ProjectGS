@@ -58,7 +58,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void StartGame()
+    public void StartGame()
     {
         levelManager.SetActive(true);
         SetGameState(GameState.Playing);
