@@ -1,0 +1,940 @@
+fileFormatVersion: 2
+guid: de6e32fb109d34a10b64ed634c4ddc7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 869160262335202407
+    second: gmboy_title_0
+  - first:
+      213: 2003411522311166223
+    second: gmboy_title_1
+  - first:
+      213: -3039111233103204821
+    second: gmboy_title_2
+  - first:
+      213: 7120074969633991118
+    second: gmboy_title_3
+  - first:
+      213: -2767794535588607661
+    second: gmboy_title_4
+  - first:
+      213: 7751763604077650730
+    second: gmboy_title_5
+  - first:
+      213: 6892072582479910589
+    second: gmboy_title_6
+  - first:
+      213: 3835877734737528813
+    second: gmboy_title_7
+  - first:
+      213: 8429707959658446859
+    second: gmboy_title_8
+  - first:
+      213: -3656763073349048164
+    second: gmboy_title_9
+  - first:
+      213: 2488817920221634848
+    second: gmboy_title_10
+  - first:
+      213: -8553471999487369436
+    second: gmboy_title_11
+  - first:
+      213: -4040050107004938183
+    second: gmboy_title_12
+  - first:
+      213: 6007228167816751773
+    second: gmboy_title_13
+  - first:
+      213: 5410223176721610658
+    second: gmboy_title_14
+  - first:
+      213: 4962984335776727714
+    second: gmboy_title_15
+  - first:
+      213: 7815785143619480793
+    second: gmboy_title_16
+  - first:
+      213: 9206782307524706963
+    second: gmboy_title_17
+  - first:
+      213: 8952930205898674980
+    second: gmboy_title_18
+  - first:
+      213: 4001874816750083472
+    second: gmboy_title_19
+  - first:
+      213: -5449234331383450970
+    second: gmboy_title_20
+  - first:
+      213: -964312852083877458
+    second: gmboy_title_21
+  - first:
+      213: 1405908013423743092
+    second: gmboy_title_22
+  - first:
+      213: -4164660826580094442
+    second: gmboy_title_23
+  - first:
+      213: -1597150057527797858
+    second: gmboy_title_24
+  - first:
+      213: -2825532526324507866
+    second: gmboy_title_25
+  - first:
+      213: 5849814228505707108
+    second: gmboy_title_26
+  - first:
+      213: 8135031893094625993
+    second: gmboy_title_27
+  - first:
+      213: 3231626351662456040
+    second: gmboy_title_28
+  - first:
+      213: 3759171316157146469
+    second: gmboy_title_29
+  - first:
+      213: -4843838310446510105
+    second: gmboy_title_30
+  - first:
+      213: 2414017207034053930
+    second: gmboy_title_31
+  - first:
+      213: -703733051856181446
+    second: gmboy_title_32
+  - first:
+      213: -562072063540635055
+    second: gmboy_title_33
+  - first:
+      213: -3744983475190086070
+    second: gmboy_title_34
+  - first:
+      213: 8436155319447378674
+    second: gmboy_title_35
+  - first:
+      213: 730765042670866297
+    second: gmboy_title_36
+  - first:
+      213: 4031812416479082718
+    second: gmboy_title_37
+  - first:
+      213: -6310417201543106547
+    second: gmboy_title_38
+  - first:
+      213: -9002617572867765948
+    second: gmboy_title_39
+  - first:
+      213: 2781847242700582532
+    second: gmboy_title_40
+  - first:
+      213: -769696897111403192
+    second: gmboy_title_41
+  - first:
+      213: -1877703919289104071
+    second: gmboy_title_42
+  - first:
+      213: -6920649003130354705
+    second: gmboy_title_43
+  - first:
+      213: -3796150550479968971
+    second: gmboy_title_44
+  - first:
+      213: 5426960855399050921
+    second: gmboy_title_45
+  - first:
+      213: 647942280610216024
+    second: gmboy_title_46
+  - first:
+      213: -4338388961165253404
+    second: gmboy_title_47
+  - first:
+      213: -3589084895616268964
+    second: gmboy_title_48
+  - first:
+      213: -5319689315923617025
+    second: gmboy_title_49
+  - first:
+      213: -3934025748991999548
+    second: gmboy_title_50
+  - first:
+      213: -1077327598748752470
+    second: gmboy_title_51
+  - first:
+      213: 9016944186721614273
+    second: gmboy_title_52
+  - first:
+      213: -8730373848325587031
+    second: gmboy_title_53
+  - first:
+      213: -7786124764973155857
+    second: gmboy_title_54
+  - first:
+      213: 6348476445262267164
+    second: gmboy_title_55
+  - first:
+      213: 988284449558026150
+    second: gmboy_title_56
+  - first:
+      213: -512540707384590303
+    second: gmboy_title_57
+  - first:
+      213: 4562633604112534301
+    second: gmboy_title_58
+  - first:
+      213: -5097243898180348969
+    second: gmboy_title_59
+  - first:
+      213: -7703695265702517217
+    second: gmboy_title_60
+  - first:
+      213: -2613269500797963251
+    second: gmboy_title_61
+  - first:
+      213: -5125630747337265719
+    second: gmboy_title_62
+  - first:
+      213: -1344691034763539229
+    second: gmboy_title_63
+  - first:
+      213: -7614034928312838461
+    second: gmboy_title_64
+  - first:
+      213: -2711353375945412709
+    second: gmboy_title_65
+  - first:
+      213: 8179568643078726775
+    second: gmboy_title_66
+  - first:
+      213: 6835275737756940614
+    second: gmboy_title_67
+  - first:
+      213: -7276520765441087021
+    second: gmboy_title_68
+  - first:
+      213: -8796257690300551466
+    second: gmboy_title_69
+  - first:
+      213: 5806108516996670733
+    second: gmboy_title_70
+  - first:
+      213: 4699401892131668291
+    second: gmboy_title_71
+  - first:
+      213: -3048696953379063794
+    second: gmboy_title_72
+  - first:
+      213: 5137181298529205445
+    second: gmboy_title_73
+  - first:
+      213: 5190369139814860023
+    second: gmboy_title_74
+  - first:
+      213: 9103912169767105166
+    second: gmboy_title_75
+  - first:
+      213: -8491364978488236082
+    second: gmboy_title_76
+  - first:
+      213: 4062010502012260089
+    second: gmboy_title_77
+  - first:
+      213: 5660627735983423238
+    second: gmboy_title_78
+  - first:
+      213: 366861161052219797
+    second: gmboy_title_79
+  - first:
+      213: 254327372726347717
+    second: gmboy_title_80
+  - first:
+      213: 3868744775103765010
+    second: gmboy_title_81
+  - first:
+      213: -6674809930112114327
+    second: gmboy_title_82
+  - first:
+      213: -4651661317245709923
+    second: gmboy_title_83
+  - first:
+      213: -4235597119511802776
+    second: gmboy_title_84
+  - first:
+      213: -7779897386196477477
+    second: gmboy_title_85
+  - first:
+      213: 3975127669310489543
+    second: gmboy_title_86
+  - first:
+      213: -5589352557254493040
+    second: gmboy_title_87
+  - first:
+      213: 1828801520670225585
+    second: gmboy_title_88
+  - first:
+      213: -2066312019902396125
+    second: gmboy_title_89
+  - first:
+      213: -6038061693598510566
+    second: gmboy_title_90
+  - first:
+      213: 8029168212225214238
+    second: gmboy_title_91
+  - first:
+      213: 3536159063473621182
+    second: gmboy_title_92
+  - first:
+      213: 7971026227561195537
+    second: gmboy_title_93
+  - first:
+      213: -103414048825775775
+    second: gmboy_title_94
+  - first:
+      213: -4450414801364873626
+    second: gmboy_title_95
+  - first:
+      213: -7159134796476992234
+    second: gmboy_title_96
+  - first:
+      213: -3729567249269573303
+    second: gmboy_title_97
+  - first:
+      213: -3709769564867654626
+    second: gmboy_title_98
+  - first:
+      213: 3008566162813599694
+    second: gmboy_title_99
+  - first:
+      213: -6942510089975892466
+    second: gmboy_title_100
+  - first:
+      213: -2485852785508427517
+    second: gmboy_title_101
+  - first:
+      213: 7291466253737162775
+    second: gmboy_title_102
+  - first:
+      213: 3693290300575422387
+    second: gmboy_title_103
+  - first:
+      213: 238646089266210154
+    second: gmboy_title_104
+  - first:
+      213: -4152074132424058946
+    second: gmboy_title_105
+  - first:
+      213: 8362063546212965423
+    second: gmboy_title_106
+  - first:
+      213: -1597099946894636583
+    second: gmboy_title_107
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 18
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gmboy_title_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764006157a0ef0c00800000000000000
+      internalID: 869160262335202407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_1
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 288
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09184e3a2c8dcb10800000000000000
+      internalID: 2003411522311166223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_2
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 288
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2eebf57f68e2d5d0800000000000000
+      internalID: -3039111233103204821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_3
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 288
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec92f2b06769fc260800000000000000
+      internalID: 7120074969633991118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_4
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 288
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35949f6c881d699d0800000000000000
+      internalID: -2767794535588607661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a23a9d36debc39b60800000000000000
+      internalID: 7751763604077650730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 192
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db69cec7f7f85af50800000000000000
+      internalID: 6892072582479910589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_7
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 192
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de74cd4f976cb3530800000000000000
+      internalID: 3835877734737528813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_8
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 192
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0089bf0ab65cf470800000000000000
+      internalID: 8429707959658446859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_9
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 192
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98a341fb51904dc0800000000000000
+      internalID: -3656763073349048164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021ef6d46be0a8220800000000000000
+      internalID: 2488817920221634848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_11
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 96
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f1e42e886fb4980800000000000000
+      internalID: -8553471999487369436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_12
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 96
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938113135dbdee7c0800000000000000
+      internalID: -4040050107004938183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_13
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 96
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a2073e036fd5350800000000000000
+      internalID: 6007228167816751773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_14
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 96
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7b31c8059f41b40800000000000000
+      internalID: 5410223176721610658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a2ccc755ff00e440800000000000000
+      internalID: 4962984335776727714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_16
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 0
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dce636ad2f377c60800000000000000
+      internalID: 7815785143619480793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_17
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 0
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3928c54aabf05cf70800000000000000
+      internalID: 9206782307524706963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_18
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 0
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423947d66923f3c70800000000000000
+      internalID: 8952930205898674980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gmboy_title_19
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 0
+        width: 116
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d58f761f3898730800000000000000
+      internalID: 4001874816750083472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: e65ac6f1f5f6b40d88735e0fc8de9aa0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      gmboy_title_0: 869160262335202407
+      gmboy_title_1: 2003411522311166223
+      gmboy_title_10: 2488817920221634848
+      gmboy_title_11: -8553471999487369436
+      gmboy_title_12: -4040050107004938183
+      gmboy_title_13: 6007228167816751773
+      gmboy_title_14: 5410223176721610658
+      gmboy_title_15: 4962984335776727714
+      gmboy_title_16: 7815785143619480793
+      gmboy_title_17: 9206782307524706963
+      gmboy_title_18: 8952930205898674980
+      gmboy_title_19: 4001874816750083472
+      gmboy_title_2: -3039111233103204821
+      gmboy_title_3: 7120074969633991118
+      gmboy_title_4: -2767794535588607661
+      gmboy_title_5: 7751763604077650730
+      gmboy_title_6: 6892072582479910589
+      gmboy_title_7: 3835877734737528813
+      gmboy_title_8: 8429707959658446859
+      gmboy_title_9: -3656763073349048164
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

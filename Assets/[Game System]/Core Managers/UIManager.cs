@@ -1,10 +1,17 @@
 using UnityEngine;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
-    [SerializeField] private GameObject mainMenu;
-    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private CanvasGroup mainMenu;
+    [SerializeField] private CanvasGroup pauseMenu;
+
+    public bool isUIActive { get; private set; } = false;
+
+    private float fadeDuration = 1f;
+    private float starDelay = 0.5f;
+    private Ease fadeEase = Ease.OutQuad;
 
     private void Awake()
     {
@@ -21,24 +28,51 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        ShowMainMenu();
+        // ShowMainMenu();
     }
 
     public void ShowMainMenu()
     {
-        mainMenu.SetActive(true);
-        pauseMenu.SetActive(false);
+        isUIActive = true;
+        AudioManager.PlayLoop("BackgroundMusic");
+        mainMenu.DOFade(1f, fadeDuration)
+            .SetDelay(starDelay)
+            .SetEase(fadeEase)
+            .OnComplete(() => 
+            {
+                mainMenu.interactable = true;
+                mainMenu.blocksRaycasts = true;
+            }
+            );
     }
 
     public void EnterGame()
     {
-        mainMenu.SetActive(false);
-        pauseMenu.SetActive(false);
+        isUIActive = false;
+        mainMenu.DOFade(0f, fadeDuration)
+            .SetEase(fadeEase)
+            .OnComplete(() => 
+            {
+                mainMenu.interactable = false;
+                mainMenu.blocksRaycasts = false;
+            }
+            );
     }
 
     public void ShowPauseMenu()
     {
-        pauseMenu.SetActive(true);
+        isUIActive = true;
+        pauseMenu.alpha = 1f;
+        pauseMenu.interactable = true;
+        pauseMenu.blocksRaycasts = true;
+    }
+
+    public void HidePauseMenu()
+    {
+        isUIActive = false;
+        pauseMenu.alpha = 0f;
+        pauseMenu.interactable = false;
+        pauseMenu.blocksRaycasts = false;
     }
 
     public void ShowGameFinishedUI()

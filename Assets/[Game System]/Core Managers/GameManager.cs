@@ -41,23 +41,19 @@ public class GameManager : MonoBehaviour
         {
             case GameState.MainMenu:
                 Time.timeScale = 1f;
-                UIManager.Instance.ShowMainMenu();
                 gameTimer = 0f;
                 SwitchInputToUI();
                 break;
             case GameState.Playing:
                 Time.timeScale = 1f;
-                UIManager.Instance.EnterGame();
                 SwitchInputToPlayer();
                 break;
             case GameState.Paused:
                 Time.timeScale = 0f;
-                UIManager.Instance.ShowPauseMenu();
                 SwitchInputToUI();
                 break;
             case GameState.GameFinished:
                 Time.timeScale = 1f;
-                UIManager.Instance.ShowGameFinishedUI();
                 SwitchInputToUI();
                 break;
         }
