@@ -13,25 +13,14 @@ public class BlinkingText : MonoBehaviour
     private void Start()
     {
         // TRY to get TextMeshPro component first (Preferred)
-        var tmpText = GetComponent<TextMeshProUGUI>();
+        var image = GetComponent<Image>();
         
-        if (tmpText != null)
+        if (image != null)
         {
-            // Blink TextMeshPro
-            tmpText.DOFade(minAlpha, blinkDuration)
+            // Blink Image
+            image.DOFade(minAlpha, blinkDuration)
                 .SetLoops(-1, LoopType.Yoyo) // -1 = Infinite loop, Yoyo = Back and Forth
                 .SetEase(blinkEase);
-        }
-        else
-        {
-            // Fallback to standard Unity Text
-            var legacyText = GetComponent<Text>();
-            if (legacyText != null)
-            {
-                legacyText.DOFade(minAlpha, blinkDuration)
-                    .SetLoops(-1, LoopType.Yoyo)
-                    .SetEase(blinkEase);
-            }
         }
     }
 }
