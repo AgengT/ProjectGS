@@ -1,49 +1,49 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
+using TMPro;
+
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public GameState CurrentGameState { get; private set; }
-    public float gameTimer {get; private set;}
-
+    public float gameTimer { get; private set; }
+    
     private PlayerInputAction inputActions;
+    public PlayerInputAction InputActions => inputActions; 
+    
+    private PlayerMovement cachedPlayer;
+    
     [SerializeField] private GameObject levelManager;
     [SerializeField] private PlayerMovement playerMovement;
-
+    [SerializeField] private GameObject finalRoomUI;
+    [SerializeField] private UpdateTimeText time;
+    public Action<float> onTimerUpdate;
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
             return;
         }
         Instance = this;
-        DontDestroyOnLoad(this.gameObject);
-
+        DontDestroyOnLoad(gameObject);
         inputActions = new PlayerInputAction();
     }
-
- 
+    
     private void Start()
     {
         inputActions.Player.OpenPause.performed += _ => TogglePause();
-        
         inputActions.UI.Close.performed += _ => TogglePause();
-
+        cachedPlayer = playerMovement; 
         SetGameState(GameState.MainMenu);
     }
-
-    private void OnEnable()
-    {
-        inputActions?.Enable();
-    }
-
-    private void OnDisable()
-    {
-        inputActions?.Disable();
-    }
-
+    
+    private void OnEnable() => inputActions?.Enable();
+    private void OnDisable() => inputActions?.Disable();
+    
     private void Update()
     {
         if (CurrentGameState == GameState.Playing)
@@ -51,87 +51,81 @@ public class GameManager : MonoBehaviour
             gameTimer += Time.deltaTime;
         }
     }
-
+    
     public void TogglePause()
     {
-        if (CurrentGameState == GameState.MainMenu || CurrentGameState == GameState.GameFinished) return;
-
-        if (CurrentGameState == GameState.Playing)
+        if (CurrentGameState == GameState.MainMenu || CurrentGameState == GameState.GameFinished) 
+            return;
+            
+        bool isPaused = CurrentGameState == GameState.Paused;
+        SetGameState(isPaused ? GameState.Playing : GameState.Paused);
+        
+        if (isPaused)
         {
-            SetGameState(GameState.Paused);
+            UIManager.Instance.HidePauseMenu();
+            SwitchInputToPlayer();
+        }
+        else
+        {
             UIManager.Instance.ShowPauseMenu();
         }
-        else if (CurrentGameState == GameState.Paused)
-        {
-            GameManager.Instance.SetGameState(GameState.Playing);
-            UIManager.Instance.HidePauseMenu();
-            SwitchInputToPlayer(); 
-        }
     }
-
+    
     public void SetGameState(GameState newState)
     {
         CurrentGameState = newState;
+        
+        // Time.timeScale = newState == GameState.Paused ? 0f : 1f;
+        finalRoomUI.SetActive(newState == GameState.GameFinished);
+        
         switch (newState)
         {
             case GameState.MainMenu:
-                Time.timeScale = 1f;
                 gameTimer = 0f;
                 SwitchInputToUI();
                 break;
-            case GameState.Playing:
-                Time.timeScale = 1f;
-                break;
             case GameState.Paused:
-                Time.timeScale = 0f;
                 SwitchInputToUI();
                 break;
             case GameState.GameFinished:
-                Time.timeScale = 1f;
+                time.UpdateTime(gameTimer);
+                break;
+            case GameState.Playing:
+                SwitchInputToPlayer();
                 break;
         }
     }
-
+    
     public void StartGame()
     {
         levelManager.SetActive(true);
         LevelManager.Instance.ResetLevels();
-
         gameTimer = 0f;
-
         SetGameState(GameState.Playing);
         SwitchInputToPlayer();
-
-        inputActions.Player.Enable();
-        inputActions.UI.Disable();
-
-        LevelManager.Instance.LoadLevel(0);   
-
-        playerMovement.GetComponent<SpriteRenderer>().enabled = true;
-        playerMovement.EnableInput();
+        LevelManager.Instance.LoadLevel(0);
+        
+        if (cachedPlayer != null)
+        {
+            cachedPlayer.GetComponent<SpriteRenderer>().enabled = true;
+            cachedPlayer.EnableInput();
+        }
     }
-
-    public void RetryGame()
-    {
-        StartGame();
-    }
-
+    
+    public void RetryGame() => StartGame();
+    
     public void SwitchInputToUI()
     {
         inputActions.Player.Disable();
         inputActions.UI.Enable();
-
-        var player = FindFirstObjectByType<PlayerMovement>();
-        if (player != null) player.DisableInput();
+        cachedPlayer?.DisableInput();
     }
-
+    
     public void SwitchInputToPlayer()
     {
         inputActions.UI.Disable();
         inputActions.Player.Enable();
-
-        var player = FindFirstObjectByType<PlayerMovement>();
-        if (player != null) player.EnableInput();
+        cachedPlayer?.EnableInput(); 
     }
 }
 

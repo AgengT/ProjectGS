@@ -3,7 +3,6 @@ using UnityEngine;
 public class UpdateTimeText : MonoBehaviour
 {
    [SerializeField] private TMPro.TextMeshProUGUI timeText;
-
    public void UpdateTime(float time)
     {
         int minutes = Mathf.FloorToInt(time / 60F);

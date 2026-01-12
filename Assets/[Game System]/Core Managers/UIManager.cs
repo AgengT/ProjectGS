@@ -4,16 +4,15 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance { get; private set; }
+    public bool isUIActive { get; private set; }
+    
     [SerializeField] private CanvasGroup mainMenu;
     [SerializeField] private CanvasGroup pauseMenu;
-
     [SerializeField] private MainMenuController mainMenuController;
-
-    public bool isUIActive { get; private set; } = false;
-
-    private float fadeDuration = 1f;
-    private float starDelay = 0.5f;
-    private Ease fadeEase = Ease.OutQuad;
+    
+    private const float FADE_DURATION = 0.5f;
+    private const float START_DELAY = 0.5f;
+    private const Ease FADE_EASE = Ease.OutQuad;
 
     private void Awake()
     {
@@ -32,53 +31,52 @@ public class UIManager : MonoBehaviour
     {
         HidePauseMenu();
         if(GameManager.Instance.CurrentGameState == GameState.Playing)
-        {
             LevelManager.Instance.ResetLevels();
-            GameManager.Instance.SetGameState(GameState.MainMenu);
-        }
-
+        GameManager.Instance.SetGameState(GameState.MainMenu);
+        
+        
         isUIActive = true;
         AudioManager.PlayLoop("BackgroundMusic");
-        mainMenu.DOFade(1f, fadeDuration)
-            .SetDelay(starDelay)
-            .SetEase(fadeEase)
-            .OnComplete(() => 
-            {
-                mainMenu.interactable = true;
-                mainMenu.blocksRaycasts = true;
-
-                if(mainMenuController != null) mainMenuController.EnableMenuInput();     
-            }
-            );
+        
+        mainMenu.DOFade(1f, FADE_DURATION)
+            .SetDelay(START_DELAY)
+            .SetEase(FADE_EASE)
+            .OnComplete(() => SetCanvasState(mainMenu, true));
     }
 
     public void EnterGame()
     {
         isUIActive = false;
-        mainMenu.DOFade(0f, fadeDuration)
-            .SetEase(fadeEase)
-            .OnComplete(() => 
+        
+        mainMenu.DOFade(0f, FADE_DURATION)
+            .SetEase(FADE_EASE)
+            .OnComplete(() =>
             {
-                mainMenu.interactable = false;
-                mainMenu.blocksRaycasts = false;
+                SetCanvasState(mainMenu, false);
                 GameManager.Instance.StartGame();
-            }
-            );
+            });
     }
 
     public void ShowPauseMenu()
     {
         isUIActive = true;
-        pauseMenu.alpha = 1f;
-        pauseMenu.interactable = true;
-        pauseMenu.blocksRaycasts = true;
+        SetCanvasState(pauseMenu, true);
     }
 
     public void HidePauseMenu()
     {
         isUIActive = false;
-        pauseMenu.alpha = 0f;
-        pauseMenu.interactable = false;
-        pauseMenu.blocksRaycasts = false;
+        SetCanvasState(pauseMenu, false);
+    }
+
+    // Helper method to reduce repetition
+    private void SetCanvasState(CanvasGroup canvas, bool active)
+    {
+        canvas.alpha = active ? 1f : 0f;
+        canvas.interactable = active;
+        canvas.blocksRaycasts = active;
+        
+        if (active && canvas == mainMenu && mainMenuController != null)
+            mainMenuController.EnableMenuInput();
     }
 }
