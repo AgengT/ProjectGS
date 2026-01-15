@@ -24,6 +24,10 @@ public class MainMenuController : MonoBehaviour
         inputActions.UI.Enable();
     }
 
+    public void DisableMenuInput(){
+        inputActions.UI.Disable();
+    }
+
     private void OnSelectPerformed(UnityEngine.InputSystem.InputAction.CallbackContext context)
     {
         UIManager.Instance.EnterGame();

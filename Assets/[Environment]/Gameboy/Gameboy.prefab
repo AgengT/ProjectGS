@@ -292,7 +292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2784973197475665571
 Transform:
   m_ObjectHideFlags: 0
@@ -876,6 +876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014f5c8fbe310481f8e6c7175cc19f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dpadPlaceHolder: {fileID: 0}
+  dPadActive: {fileID: 0}
+  btnPlaceHolder: {fileID: 0}
+  btnActive: {fileID: 0}
 --- !u!1 &8203363162536217353
 GameObject:
   m_ObjectHideFlags: 0

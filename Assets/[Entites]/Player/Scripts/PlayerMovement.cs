@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
     public void EnableInput()
     {
         inputActions.Player.Enable();
+        inputActions.UI.Disable();
     }
 
     public void DisableInput()

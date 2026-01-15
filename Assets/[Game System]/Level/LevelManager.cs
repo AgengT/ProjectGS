@@ -18,9 +18,11 @@ public class LevelManager : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
+        
+        LoadLevel(0);
     }
 
-    private void Start() => LoadLevel(0);
+    // private void Start() => LoadLevel(0);
 
     public void LoadLevel(int levelIndex)
     {

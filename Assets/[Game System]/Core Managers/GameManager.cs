@@ -31,12 +31,23 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
         inputActions = new PlayerInputAction();
+        Cursor.visible = false;
     }
     
     private void Start()
     {
         inputActions.Player.OpenPause.performed += _ => TogglePause();
         inputActions.UI.Close.performed += _ => TogglePause();
+
+        inputActions.UI.Select.performed += ctx => 
+        {
+            if (CurrentGameState != GameState.Playing)
+            {
+        
+                Debug.Log("UI Confirm pressed");
+            }
+        };
+
         cachedPlayer = playerMovement; 
         SetGameState(GameState.MainMenu);
     }
@@ -102,7 +113,6 @@ public class GameManager : MonoBehaviour
         LevelManager.Instance.ResetLevels();
         gameTimer = 0f;
         SetGameState(GameState.Playing);
-        SwitchInputToPlayer();
         LevelManager.Instance.LoadLevel(0);
         
         if (cachedPlayer != null)

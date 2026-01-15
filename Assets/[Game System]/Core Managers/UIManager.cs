@@ -30,10 +30,7 @@ public class UIManager : MonoBehaviour
     public void ShowMainMenu()
     {
         HidePauseMenu();
-        if(GameManager.Instance.CurrentGameState == GameState.Playing)
-            LevelManager.Instance.ResetLevels();
         GameManager.Instance.SetGameState(GameState.MainMenu);
-        
         
         isUIActive = true;
         AudioManager.PlayLoop("BackgroundMusic");
@@ -47,6 +44,7 @@ public class UIManager : MonoBehaviour
     public void EnterGame()
     {
         isUIActive = false;
+        mainMenuController.DisableMenuInput();
         
         mainMenu.DOFade(0f, FADE_DURATION)
             .SetEase(FADE_EASE)
